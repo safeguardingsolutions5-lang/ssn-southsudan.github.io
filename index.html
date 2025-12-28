@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Safeguarding Solutions Network (SSN) — Empowering Women, National NGOs through Capacity Building, Localization & Sustainable Resource Mobilization." />
+  <title>Safeguarding Solutions Network (SSN)</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2f;
+      --muted:#95a3b8;
+      --text:#e9eef7;
+      --brand:#22c55e;
+      --brand2:#38bdf8;
+      --line:rgba(255,255,255,.08);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius2:24px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif;background:
+      radial-gradient(1200px 600px at 15% 0%, rgba(56,189,248,.18), transparent 60%),
+      radial-gradient(900px 500px at 80% 10%, rgba(34,197,94,.16), transparent 55%),
+      linear-gradient(180deg, #070b14, #0b1220 30%, #070b14);
+      color:var(--text);
+      scroll-behavior:smooth;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 18px}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      background:rgba(7,11,20,.72);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .brand{
+      display:flex;align-items:center;gap:12px;min-width:220px
+    }
+    .logo{
+      width:42px;height:42px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(34,197,94,.9), rgba(56,189,248,.9));
+      box-shadow: var(--shadow);
+      display:grid;place-items:center;font-weight:800;color:#071018;
+    }
+    .brand h1{font-size:14px;margin:0;line-height:1.15}
+    .brand p{margin:2px 0 0 0;font-size:11px;color:var(--muted)}
+    .menu{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{
+      font-size:13px;color:var(--muted);
+      padding:8px 10px;border-radius:12px;
+    }
+    .menu a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text);font-weight:650;
+    }
+    .btn:hover{transform:translateY(-1px);transition:.2s}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(56,189,248,.95));
+      border:0;color:#071018;
+    }
+    .btn.small{padding:10px 12px;border-radius:12px;font-size:13px}
+    .hero{padding:52px 0 22px}
+    .hero-grid{display:grid;grid-template-columns: 1.15fr .85fr;gap:24px;align-items:stretch}
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      padding:26px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute;inset:-2px;
+      background: radial-gradient(700px 220px at 15% 10%, rgba(56,189,248,.18), transparent 60%),
+                  radial-gradient(600px 240px at 75% 0%, rgba(34,197,94,.16), transparent 55%);
+      pointer-events:none;
+    }
+    .hero-card > *{position:relative}
+    .kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 10px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      font-size:12px;color:var(--muted);
+      margin-bottom:14px;
+    }
+    .dot{width:8px;height:8px;border-radius:99px;background:var(--brand)}
+    .hero h2{margin:0 0 12px 0;font-size:34px;line-height:1.1;letter-spacing:-.02em}
+    .hero p{margin:0 0 18px 0;color:var(--muted);font-size:15px;line-height:1.6}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .stats{
+      display:grid;grid-template-columns: repeat(3, 1fr);gap:12px;margin-top:18px
+    }
+    .stat{
+      padding:14px;border-radius:16px;border:1px solid var(--line);
+      background:rgba(255,255,255,.04)
+    }
+    .stat b{display:block;font-size:18px}
+    .stat span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+    .side{
+      display:flex;flex-direction:column;gap:14px
+    }
+    .panel{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      padding:18px;
+    }
+    .panel h3{margin:0 0 10px 0;font-size:14px}
+    .pill-row{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{
+      padding:8px 10px;border-radius:999px;border:1px solid var(--line);
+      color:var(--muted);font-size:12px;background:rgba(255,255,255,.03)
+    }
+    .section{padding:34px 0}
+    .section h2{margin:0 0 8px 0;font-size:22px;letter-spacing:-.01em}
+    .section p.lead{margin:0 0 18px 0;color:var(--muted);max-width:850px;line-height:1.6}
+    .grid{
+      display:grid;grid-template-columns: repeat(3, 1fr);gap:14px
+    }
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+      transition: .2s transform ease;
+    }
+    .card:hover{transform: translateY(-2px)}
+    .icon{
+      width:42px;height:42px;border-radius:16px;
+      display:grid;place-items:center;
+      background:rgba(56,189,248,.12);
+      border:1px solid rgba(56,189,248,.18);
+      margin-bottom:12px;
+      font-weight:800;color:var(--brand2)
+    }
+    .card h3{margin:0 0 8px 0;font-size:15px}
+    .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+    .two-col{
+      display:grid;grid-template-columns: 1fr 1fr;gap:14px
+    }
+    .list{display:grid;gap:10px;margin:10px 0 0 0;padding:0;list-style:none}
+    .list li{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:10px 12px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);font-size:13px;line-height:1.5
+    }
+    .check{
+      width:18px;height:18px;border-radius:6px;
+      background:rgba(34,197,94,.18);
+      border:1px solid rgba(34,197,94,.25);
+      display:grid;place-items:center;color:var(--brand);flex:0 0 auto;
+      margin-top:2px;
+      font-weight:900;font-size:12px
+    }
+    .cta{
+      border-radius: var(--radius2);
+      border:1px solid var(--line);
+      background: linear-gradient(135deg, rgba(34,197,94,.14), rgba(56,189,248,.12));
+      padding:22px;
+      display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .cta strong{font-size:16px}
+    .cta span{color:var(--muted);font-size:13px;display:block;margin-top:4px}
+    .form{
+      display:grid;gap:10px;margin-top:12px
+    }
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(7,11,20,.35);
+      color:var(--text);
+      outline:none;
+      font-size:14px;
+    }
+    textarea{min-height:120px;resize:vertical}
+    .footer{
+      padding:24px 0 40px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    .footer a{color:var(--muted)}
+    .footer a:hover{color:var(--text)}
+    .tiny{font-size:12px;color:var(--muted);line-height:1.6}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      font-size:12px;color:var(--muted);
+    }
+    .whatsapp{
+      position:fixed;right:16px;bottom:16px;z-index:60;
+      border-radius:999px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 560px){
+      .menu{display:none}
+      .stats{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .hero h2{font-size:28px}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="SSN Home">
+          <div class="logo">SSN</div>
+          <div>
+            <h1>Safeguarding Solutions Network</h1>
+            <p>Capacity Building • Localization • Resource Mobilization</p>
+          </div>
+        </a>
+
+        <nav class="menu" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn small primary" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="kicker"><span class="dot"></span> South Sudan–based consultancy & training firm</div>
+            <h2>Empowering Women, National NGOs through Capacity Building, Localization & Sustainable Resource Mobilization</h2>
+            <p>
+              SSN supports humanitarian and development partners with safeguarding & PSEA, protection and inclusion,
+              research & evaluations, organizational development, and high-impact trainings—delivered with strong local
+              knowledge and donor-ready quality.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#contact">Talk to SSN</a>
+              <a class="btn" href="#services">Explore Services</a>
+              <a class="btn" href="#projects">See Work Samples</a>
+            </div>
+
+            <div class="stats" aria-label="Highlights">
+              <div class="stat">
+                <b>Donor-ready</b>
+                <span>Reports, tools & deliverables formatted for partners</span>
+              </div>
+              <div class="stat">
+                <b>Field-proven</b>
+                <span>Experience across counties & hard-to-reach areas</span>
+              </div>
+              <div class="stat">
+                <b>Local-first</b>
+                <span>Localization, capacity transfer & sustainability</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="side">
+            <div class="panel">
+              <h3>Core Areas</h3>
+              <div class="pill-row">
+                <span class="pill">Safeguarding & PSEA</span>
+                <span class="pill">Research & Evaluations</span>
+                <span class="pill">Training & ToT</span>
+                <span class="pill">MEAL Systems</span>
+                <span class="pill">Protection & Inclusion</span>
+                <span class="pill">Risk & Security</span>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Quick Contacts</h3>
+              <p class="tiny" style="margin:0;">
+                Update the details below with your official SSN contacts (email/phone).  
+                The WhatsApp button at the bottom will work once you add your number.
+              </p>
+              <ul class="list" style="margin-top:12px;">
+                <li><span class="check">✓</span> Email: <span id="ssnEmail">info@yourdomain.org</span></li>
+                <li><span class="check">✓</span> Location: Juba, South Sudan (and field locations)</li>
+                <li><span class="check">✓</span> Availability: Mon–Sat • Field deployments on request</li>
+              </ul>
+              <div class="cta-row" style="margin-top:12px;">
+                <a class="btn small" href="#contact">Send a message</a>
+                <a class="btn small" href="#projects">Downloadables (coming)</a>
+              </div>
+            </div>
+
+            <div class="panel">
+              <span class="badge">⚡ Tip</span>
+              <p class="tiny" style="margin:10px 0 0 0;">
+                Want a more “premium” site? Later you can add a custom domain like <b>www.ssn-southsudan.org</b>
+                and professional email, but this GitHub site is already solid for proposals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About SSN</h2>
+        <p class="lead">
+          Safeguarding Solutions Network (SSN) is a South Sudan–based consultancy and capacity building firm supporting
+          national NGOs, women-led groups, and humanitarian/development actors to deliver safer, stronger, and more
+          accountable programs.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>
+              Strengthen local organizations and community systems through practical capacity building, safeguarding,
+              evidence-based research, and sustainable resource mobilization.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">🧭</div>
+            <h3>Our Values</h3>
+            <p>
+              Integrity, accountability, respect, inclusion, do-no-harm, confidentiality, survivor-centered approaches,
+              and quality delivery aligned to donor standards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="lead">
+          We provide complete end-to-end support—from assessment and design to implementation, training, tools, and reporting.
+          Below are SSN’s core service packages.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">🛡️</div>
+            <h3>Safeguarding & PSEA</h3>
+            <p>Policy development, risk assessments, trainings, referral pathways, reporting systems, and compliance support.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📊</div>
+            <h3>Research & Evaluations</h3>
+            <p>Baseline/midline/endline studies, KIIs/FGDs, data collection tools, analysis, learning briefs, and donor-ready reports.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Capacity Building & ToT</h3>
+            <p>Facilitated trainings with manuals, workplans, M&E tools, and coaching for staff and community structures.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📈</div>
+            <h3>MEAL Systems</h3>
+            <p>Indicator frameworks, data quality assurance, feedback mechanisms, learning reviews, and reporting templates.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Localization Support</h3>
+            <p>Organizational development, governance strengthening, compliance, partnership systems, and readiness for funding.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧯</div>
+            <h3>Risk, Safety & Security</h3>
+            <p>Risk assessments, SOPs, incident reporting, security training, and operational safety planning.</p>
+          </div>
+        </div>
+
+        <div class="cta" style="margin-top:16px;">
+          <div>
+            <strong>Need a tailored package for a donor call?</strong>
+            <span>Share the ToR and we’ll propose a compliant workplan, tools, and budget framework.</span>
+          </div>
+          <a class="btn primary" href="#contact">Send the ToR</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach" class="section">
+      <div class="container">
+        <h2>How We Work</h2>
+        <p class="lead">
+          SSN follows a practical, field-ready approach that balances technical quality with community realities.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="icon">1</div>
+            <h3>Assess & Align</h3>
+            <p>We review your ToR, context, risks, and deliverables; then align methodology to donor requirements and local realities.</p>
+            <ul class="list">
+              <li><span class="check">✓</span> Stakeholder mapping & kick-off</li>
+              <li><span class="check">✓</span> Workplan, tools & quality plan</li>
+              <li><span class="check">✓</span> Ethical/safeguarding protocols</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="icon">2</div>
+            <h3>Deliver & Transfer Capacity</h3>
+            <p>We implement with strong documentation and knowledge transfer, leaving you with reusable tools and systems.</p>
+            <ul class="list">
+              <li><span class="check">✓</span> Training manuals & facilitation</li>
+              <li><span class="check">✓</span> Data collection & analysis</li>
+              <li><span class="check">✓</span> Final report + annexes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Sample Work Areas</h2>
+        <p class="lead">
+          Replace these with your real project highlights (CARE, WHO, LWF, Oxfam, etc.). This section is designed to look strong in donor reviews.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <div class="icon">📝</div>
+            <h3>Policy & Systems Development</h3>
+            <p>Safeguarding/PSEA policies, HR/Finance/ICT policies, SOPs, reporting tools, and compliance packages.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📷</div>
+            <h3>Media & Impact Documentation</h3>
+            <p>Human-interest stories, photo/video documentation, scripts, interviews, editing, and publication-ready outputs.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧩</div>
+            <h3>Community & Partner Capacity</h3>
+            <p>Workshops for CSOs and women-led organizations, coaching, mentorship, and learning follow-ups.</p>
+          </div>
+        </div>
+
+        <div class="cta" style="margin-top:16px;">
+          <div>
+            <strong>Want a “Portfolio” PDF added here?</strong>
+            <span>Upload a PDF to this GitHub repo and I’ll link it professionally on this page.</span>
+          </div>
+          <a class="btn" href="#contact">Request portfolio setup</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact SSN</h2>
+        <p class="lead">
+          Send a message and we’ll respond with next steps. If you prefer WhatsApp, use the floating button at the bottom-right.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="icon">✉️</div>
+            <h3>Send an Email</h3>
+            <p>
+              This form opens your email app (it’s free hosting, so we use mailto).  
+              Update the email address inside the code (search for <b>YOUR_EMAIL_HERE</b>).
+            </p>
+
+            <form class="form" id="contactForm">
+              <input id="name" placeholder="Your Name" required />
+              <input id="org" placeholder="Organization (optional)" />
+              <input id="email" type="email" placeholder="Your Email" required />
+              <textarea id="message" placeholder="Your message (ToR link, timeline, location, budget range, etc.)" required></textarea>
+              <button class="btn primary" type="submit">Compose Email</button>
+              <p class="tiny" style="margin:0;">Tip: Include location (state/county), deliverables, and deadline for fastest response.</p>
+            </form>
+          </div>
+
+          <div class="card">
+            <div class="icon">📍</div>
+            <h3>Office & Coverage</h3>
+            <p>Based in Juba with operational support for field work across South Sudan (and regional support where required).</p>
+            <ul class="list">
+              <li><span class="check">✓</span> Juba, South Sudan (HQ)</li>
+              <li><span class="check">✓</span> Field deployments: on request</li>
+              <li><span class="check">✓</span> Fast turnaround on proposals & tools</li>
+            </ul>
+
+            <div class="cta-row" style="margin-top:12px;">
+              <a class="btn" id="emailLink" href="mailto:YOUR_EMAIL_HERE?subject=Inquiry%20-%20SSN%20Services">Email SSN</a>
+              <a class="btn" id="whatsLink" href="#" target="_blank" rel="noopener">WhatsApp SSN</a>
+            </div>
+
+            <p class="tiny" style="margin-top:12px;">
+              <b>Next step:</b> Tell me your SSN email + WhatsApp number and I’ll update them in the code for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="badge">© <span id="year"></span> Safeguarding Solutions Network (SSN)</div>
+        <div class="footer-grid">
+          <div class="tiny">
+            <b style="color:var(--text)">About</b><br/>
+            SSN supports partners with safeguarding and PSEA, research and evaluations, MEAL systems, and capacity building.
+            Our delivery is local-first, donor-aligned, and field-tested.
+          </div>
+          <div class="tiny">
+            <b style="color:var(--text)">Quick Links</b><br/>
+            <a href="#about">About</a><br/>
+            <a href="#services">Services</a><br/>
+            <a href="#projects">Projects</a><br/>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="tiny">
+            <b style="color:var(--text)">Contact</b><br/>
+            Email: <span id="footerEmail">YOUR_EMAIL_HERE</span><br/>
+            WhatsApp: <span id="footerWhats">+0000000000</span><br/>
+            Location: Juba, South Sudan
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a class="btn primary whatsapp" id="whatsappFloating" href="#" target="_blank" rel="noopener" aria-label="WhatsApp SSN">
+      💬 WhatsApp
+    </a>
+  </main>
+
+  <script>
+    // ====== UPDATE THESE 2 VALUES (IMPORTANT) ======
+    const SSN_EMAIL = "YOUR_EMAIL_HERE";      // e.g. "safeguardingsolutionsnetwork@gmail.com"
+    const SSN_WHATSAPP = "+0000000000";       // e.g. "+2119XXXXXXXX" (include country code, no spaces ideally)
+
+    // Optional: default WhatsApp message
+    const WA_DEFAULT_TEXT = "Hello SSN, I would like to inquire about your services. Please share next steps.";
+
+    // ====== Helpers ======
+    const enc = encodeURIComponent;
+    const waLink = (phone, text) => `https://wa.me/${phone.replace(/\D/g,'')}?text=${enc(text)}`;
+
+    // Set year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Set email placeholders
+    document.getElementById("ssnEmail").textContent = SSN_EMAIL;
+    document.getElementById("footerEmail").textContent = SSN_EMAIL;
+
+    const emailLink = document.getElementById("emailLink");
+    emailLink.href = `mailto:${SSN_EMAIL}?subject=${enc("Inquiry - SSN Services")}`;
+
+    // Set WhatsApp links
+    document.getElementById("footerWhats").textContent = SSN_WHATSAPP;
+
+    const whatsLink = document.getElementById("whatsLink");
+    whatsLink.href = waLink(SSN_WHATSAPP, WA_DEFAULT_TEXT);
+
+    const whatsappFloating = document.getElementById("whatsappFloating");
+    whatsappFloating.href = waLink(SSN_WHATSAPP, WA_DEFAULT_TEXT);
+
+    // Contact form -> opens mail client with filled content
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const org  = document.getElementById("org").value.trim();
+      const from = document.getElementById("email").value.trim();
+      const msg  = document.getElementById("message").value.trim();
+
+      const subject = `SSN Inquiry - ${name}${org ? " ("+org+")" : ""}`;
+      const body =
+`Hello SSN,
+
+My name: ${name}
+Organization: ${org || "-"}
+My email: ${from}
+
+Message:
+${msg}
+
+Kind regards,
+${name}`;
+
+      window.location.href = `mailto:${SSN_EMAIL}?subject=${enc(subject)}&body=${enc(body)}`;
+    });
+  </script>
+</body>
+</html>
